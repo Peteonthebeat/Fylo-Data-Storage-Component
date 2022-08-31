@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* font-family: 'Raleway', sans-serif; */
+
+/* Body */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  font-family: "Raleway", sans-serif;
+  background-image: url(/images/bg-mobile.png);
+  background-size: cover;
+  font-size: 14px;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  display: grid;
+  gap: 1em;
+}
+
+/* The First Container */
+.one {
+  padding: 3em;
+  border-radius: 0.7em 7.5em 0.7em 0.7em;
+  background-color: hsl(228, 56%, 26%);
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 2em;
+}
+
+/* Icons and Stuff */
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.input-container {
+  width: 3.8em;
+  height: 3.8em;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  border-radius: 0.8em;
+  margin-right: 1em;
+}
+
+/* Second Container */
+.two {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+/* Loading Card */
+.loading-card {
+  width: 100%;
+  padding: 3em;
+  border-radius: 0.7em 0.7em 0.7em 0.7em;
+  background-color: hsl(228, 56%, 26%);
+}
+
+/* Headings and Others */
+p {
+  font-weight: 400;
+  color: hsl(243, 100%, 93%);
+  margin-bottom: 1em;
+}
+
+span {
+  font-weight: 700;
+}
+
+.gb {
+  color: hsl(243, 100%, 93%);
+  margin-bottom: 1em;
+}
+
+/* 0 to 1000GB */
+.zero-to-1000 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Loading */
+.loading {
+  width: 100%;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em 5em 0.2em 0.2em;
+  margin-bottom: 1em;
+  background-color: hsl(229deg, 57%, 11%);
+  border-radius: 3em;
+}
+.gradient {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  border-radius: 3em;
+  background: linear-gradient(
+    90deg,
+    hsl(6, 100%, 80%) 0%,
+    hsl(335, 100%, 65%) 100%
+  );
+}
+
+.white-circle {
+  width: 0.9em;
+  height: 100%;
+  background-color: white;
+  border-radius: 1em;
+}
+
+/* White Box */
+
+.white-box {
+  position: relative;
+  top: -40px;
+  width: 14em;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1em;
+}
+
+.white-box-text {
+  margin-left: 0.2em;
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.white-box-span {
+  font-size: 3em;
+  margin-right: 0.2em;
+  color: black;
+}
+
+/* Media */
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url(/images/bg-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .white-box::after {
+    display: none;
+  }
+
+  .loading-card {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: url(/images/bg-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15em;
+  }
+
+  .container {
+    align-items: end;
+    position: relative;
+  }
+
+  .white-box {
+    position: absolute;
+    top: -20px;
+    border-radius: 1em 1em 0 1em;
+    right: 30px;
+  }
+
+  .one {
+    grid-area: one;
+  }
+
+  .two {
+    grid-area: two;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas: "one two";
+    gap: 2.5em;
+  }
+
+  .white-box::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+
+    right: 0;
+    /* left: calc(50% - 20px); */
+    border-style: solid;
+    border-width: 0 25px 25px 0;
+    border-color: transparent white transparent transparent;
+  }
+}
