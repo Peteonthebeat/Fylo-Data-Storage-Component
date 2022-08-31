@@ -18,7 +18,7 @@ body {
   align-items: center;
   padding: 1.5em;
   font-family: "Raleway", sans-serif;
-  background-image: url(/images/bg-mobile.png);
+  background-image: url(bg-mobile.png);
   background-size: cover;
   font-size: 14px;
 }
@@ -161,7 +161,7 @@ span {
 /* Media */
 @media only screen and (max-width: 768px) {
   body {
-    background-image: url(/images/bg-mobile.png);
+    background-image: url(bg-mobile.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -175,7 +175,7 @@ span {
 }
 @media only screen and (min-width: 1200px) {
   body {
-    background-image: url(/images/bg-desktop.png);
+    background-image: url(bg-desktop.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
